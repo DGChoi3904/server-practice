@@ -1,0 +1,24 @@
+{
+  "name": "server-practice",
+  "version": "0.0.1",
+  "description": "리액트 연습",
+  "main": "main_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DGChoi3904/server-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DGChoi3904/server-practice/issues"
+  },
+  "homepage": "https://github.com/DGChoi3904/server-practice#readme",
+  "type": "module",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

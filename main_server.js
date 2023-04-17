@@ -9,6 +9,9 @@ import ReactDOMServer from 'react-dom/server';
 import LoginPage from './components/LoginPage.js';
 
 const server = http.createServer((request, response)=> {
+  console.log(request.method);
+  console.log(request.headers);
+  console.log(request.url);
   if(request.method === 'GET'){
     if(request.url === '/'){
       response.writeHead(200, {'Content-type':'text/HTML'});
@@ -21,9 +24,14 @@ const server = http.createServer((request, response)=> {
       // 렌더링된 renderedHtml을 write함.
       response.write(renderedHtml);
       // -끗-
-      response.end;
+      response.end();
     }
   }
+  if(request.url === "/LoginPage.client.js"){
+      response.writeHead(200, {'Content-type':'text/javascript'})
+      response.write(fs.readFileSync('./LoginPage.client.js'))
+      response.end();
+    }
 })
 server.listen(3000, err=>{
   if(err){
